@@ -142,6 +142,10 @@ main {
   display: none;
 }
 
+.menu-panel[aria-hidden="false"] {
+  display: block;
+}
+
 .menu-panel a {
   display: block;
   padding: 12px 10px;
@@ -532,6 +536,7 @@ body.contact .page-content {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   padding-top: 90px;
+  scroll-padding-top: 90px;
   scrollbar-width: none;
 }
 
@@ -650,14 +655,24 @@ body.contact .page-content {
     padding-left: 0;
   }
 
+  .home-main {
+    padding: 110px 20px 40px;
+  }
+
   .hero-big {
     flex-direction: column;
     align-items: flex-start;
   }
 
+  .hero-big span {
+    font-size: clamp(44px, 14vw, 90px);
+    letter-spacing: 4px;
+  }
+
   .hero-lower {
     flex-direction: column;
     align-items: flex-start;
+    gap: 32px;
   }
 
   .hero-photo {
@@ -668,11 +683,12 @@ body.contact .page-content {
 
   .project-row,
   .project-row:nth-child(even) {
-    flex-direction: column !important;
+    flex-direction: column-reverse !important;
     gap: 28px;
   }
 
   .project-image-wrapper {
+    position: static;
     width: 100%;
     height: 250px;
   }
@@ -680,6 +696,32 @@ body.contact .page-content {
   .project-content {
     width: 100%;
     align-items: flex-start;
+  }
+
+  .about-card {
+    padding: 28px 20px;
+  }
+
+  .card-title {
+    font-size: clamp(34px, 9vw, 52px);
+  }
+
+  .card-heading {
+    font-size: clamp(22px, 6vw, 30px);
+    margin-bottom: 10px;
+  }
+
+  .card-text,
+  .card-subtitle {
+    font-size: 1em;
+  }
+
+  .card-text {
+    line-height: 1.6;
+  }
+
+  .card-text + .card-text {
+    margin-top: 12px;
   }
 }
 
